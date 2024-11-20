@@ -3,7 +3,7 @@ const app = express();
 const path = require("path");
 const multer = require("multer");
 const fs = require("fs");
-const port = 5000;
+const port = 3000;
 
 const DataModal = require("./models/book_data");
 const DataBase = require("./config/DataBase");
@@ -121,5 +121,5 @@ app.post("/update", (req, res) => {
 
 app.listen(port, (err) => {
   if (err) console.log(err);
-  else console.log("http://localhost:5000");
+  else console.log("http://localhost:3000");
 });
