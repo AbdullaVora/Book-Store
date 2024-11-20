@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store Edit</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="form-container">
+        <form action="/update" method="post" enctype="multipart/form-data">
+            <h2>EDIT DATA</h2>
+            <input type="hidden" name="id" value="<%= data._id %>">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" value="<%= data.name %>">
+            <label for="dsc">Description</label>
+            <textarea name="dsc" id="dsc" cols="3" rows="3"><%= data.dsc %></textarea>
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author" value="<%= data.author %>">
+            <label for="publisher">Publisher</label>
+            <input type="text" id="publisher" name="publisher" value="<%= data.publisher %>">
+            <label for="price">Price</label>
+            <input type="number" id="price" name="price" value="<%= data.price %>">
+            <label for="URL">Image</label>
+            <!-- <input type="url" name="url" id="url"> -->
+            <input type="file" name="image" id="">
+            <img src="<%= data.image %>" alt="" style="width: 100px;">
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
